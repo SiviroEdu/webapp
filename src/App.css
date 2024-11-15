@@ -1,0 +1,85 @@
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .main-content {
+    height: 80vh;
+  }
+  .model {
+    height: 100%;
+  }
+  .footer-button {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-shadow: none;
+    border: none;
+  }
+  .image-button {
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    filter: brightness(0) saturate(100%) invert(13%) sepia(24%) saturate(7379%)
+      hue-rotate(233deg) brightness(70%) contrast(104%);
+  }
+  .footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .vertical-divider {
+    width: 1px;
+    height: 35px;
+    background-color: #15155a;
+  }
+  .horizontal-separator {
+    width: 100%;
+    max-width: 350px;
+    background-color: #15155a;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .name-header {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    color: #15155a;
+  }
+  .money-header {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    color: #15155a;
+  }
+  .money-header img {
+    width: 30px;
+    height: 30px;
+    color: #15155a;
+  }
+  .coins {
+    display: flex;
+    flex-direction: row;
+  }
+  .icon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(24%) saturate(7379%)
+      hue-rotate(233deg) brightness(70%) contrast(104%);
+  }
+}
