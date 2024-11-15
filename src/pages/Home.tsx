@@ -1,17 +1,22 @@
 import { Button } from "@/components/ui/button";
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import AfterLoginPage from "@/components/AfterLogInPage";
 
-export default function Home(){
-    return (
-        <div className="bg-red-600 h-screen flex flex-col align-middle items-center">
-            <div>top shit</div>
-            <div className="grow align-middle">main shit</div>
-            <div className="flex flex-row bg-background border rounded-full">
-                <img className="h-10 w-10" src="/Home.svg" alt="Logo" />
-                <img className="h-10 w-10" src="/Settings.svg" alt="Logo" />
-                <img className="h-10 w-10" src="/Vector.svg" alt="Logo" />
-                <img className="h-10 w-10" src="/Dumbbells.svg" alt="Logo" />
+export default function Home() {
+  return (
+    <AfterLoginPage>
+      <div className="flex-col max-w-3xl">
+        <h1 className="text-center text-4xl text-primary/80">WELCOME</h1>
 
-            </div>
-        </div>
-    )
+        <h2 className="text-center text-4xl text-primary/70 align-middle">
+          orem ipsum dolor sit amet
+        </h2>
+        
+        <h3 className="text-center text-4xl text-primary/60 align-middle">
+          orem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit amet
+        </h3>
+      </div>
+    </AfterLoginPage>
+  );
 }
