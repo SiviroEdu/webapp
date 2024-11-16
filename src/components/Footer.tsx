@@ -3,6 +3,15 @@ import SettingsSVG from "@/svg/SettingsSVG";
 import DumbbellsSVG from "../svg/DumbbellsSVG";
 import ShoppingCartSVG from "@/svg/ShoppingCartSVG";
 
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+  
+
 
 const Divider = () => (
     <div className="h-14 w-1 bg-primary rounded-full"></div>
@@ -54,7 +63,7 @@ export default function Footer({
           }`}
           onClick={() => HandleFooterSelect(3)}
         >
-          <SettingsSVG classes="h-20 w-20 px-2 fill-primary transition-transform duration-300" />
+          <DumbbellsSVG classes="h-20 w-20 px-2 fill-primary transition-transform duration-300" />
         </div>
         <Divider />
         <div
@@ -65,7 +74,8 @@ export default function Footer({
           }`}
           onClick={() => HandleFooterSelect(4)}
         >
-          <DumbbellsSVG classes="h-20 w-20 px-2 fill-primary transition-transform duration-300" />
+            <SettingsSVG classes="h-20 w-20 px-2 fill-primary transition-transform duration-300" />
+          
         </div>
       </div>
     );

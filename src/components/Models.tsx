@@ -3,25 +3,25 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 
 function Model() {
     const { scene } = useGLTF("/models/base_basic_pbr.gltf");
-    const camera = useThree((state) => {
-      return state.camera;
-    });
-    //   const updateFov = (fov) => {
-    //     camera.fov = fov;
-    //     camera.updateProjectionMatrix();
-    //   };
+    scene.position.set(0, 0, 0); // Ensures the model is centered at the origin
     return <primitive object={scene} />;
 }
 
-export default function Models(){
-    return(
-        <Canvas className="h-full" camera={{ position: [0, 0, 6], fov: 25 }}>
+export default function Models() {
+    return (
+        <Canvas className="!h-96 !w-96" camera={{ position: [0, 0, 14], fov: 10 }}>
             <ambientLight intensity={2} />
-            <directionalLight position={[0, 3, 3]} />
+            <directionalLight position={[3, 3, 3]} />
             <pointLight position={[10, 10, 10]} />
-            <mesh scale={[100, 100, 100]} />
             <Model />
-            <OrbitControls enableZoom={true} minDistance={3} maxDistance={15} />
+            <OrbitControls 
+                enableZoom={true} 
+                minDistance={3} 
+                maxDistance={15} 
+                target={[0, 0, 0]} // Focus on the model
+                autoRotate={true} // Enable auto-rotation
+                autoRotateSpeed={2} // Adjust the speed of rotation
+            />
         </Canvas>
-    )
+    );
 }

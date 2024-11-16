@@ -1,7 +1,9 @@
 // Parent Component
 import AfterLoginPage from "@/components/AfterLogInPage";
+import Exersices from "@/components/Exersices";
 import Home from "@/components/Home";
 import Models from "@/components/Models";
+import Shop from "@/components/shop";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -14,9 +16,9 @@ export default function Index() {
       case 1:
         return <Home/>;
       case 2:
-        return <Models />;
+        return <Shop></Shop>;
       case 3:
-        return <div>Settings Content</div>;
+        return <Exersices/>;
       case 4:
         return <div>Workout Content</div>;
       default:
