@@ -13,7 +13,7 @@ const AfterLoginPage = (
   return (
     <div className="h-screen flex max-h-screen flex-col justify-between text-white">
       <div className="h-full flex flex-col justify-between items-center">
-        <Header />
+        <Header SelectedFooterElement={SelectedFooterElement} SetSelectedFooterElement={SetSelectedFooterElement}/>
         <div className="grow flex justify-center items-center text-lg">
           {children}
         </div>

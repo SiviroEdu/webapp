@@ -2,10 +2,11 @@
 import AfterLoginPage from "@/components/AfterLogInPage";
 import Exersices from "@/components/Exersices";
 import Home from "@/components/Home";
-import Models from "@/components/Models";
-import Shop from "@/components/shop";
+import ParticleEffects from "@/components/ParticleEffects"
+import Shop from "@/components/Shop";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import RewardPopUp from "@/components/RewardPopUp";
 
 export default function Index() {
   const [SelectedFooterElement, SetSelectedFooterElement] = useState<number>(1);
@@ -20,7 +21,9 @@ export default function Index() {
       case 3:
         return <Exersices/>;
       case 4:
-        return <div>Workout Content</div>;
+        return <RewardPopUp message="You Leveled Up" type="Xp" amount={300}/>
+      case 5:
+        return <RewardPopUp message="You Leveled Up" type="Xp" amount={300}/>
       default:
         alert(`Unexpected state: ${SelectedFooterElement}`);
         return <>Error</>;
