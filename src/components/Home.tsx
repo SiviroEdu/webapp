@@ -1,12 +1,6 @@
-import { Button } from "@/components/ui/button";
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import AfterLoginPage from "@/components/AfterLogInPage";
-
-export default function Home() {
-  return (
-    <AfterLoginPage>
-      <div className="flex-col max-w-3xl">
+export default function Home(){
+    return (
+        <div className="flex-col max-w-3xl">
         <h1 className="text-center text-4xl text-black">Welcome!</h1>
         <br/>
         <h2 className="text-center text-4xl text-black align-middle">
@@ -25,6 +19,5 @@ export default function Home() {
           </h6>
         </div>
       </div>
-    </AfterLoginPage>
-  );
+    )
 }

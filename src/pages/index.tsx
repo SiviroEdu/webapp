@@ -1,5 +1,6 @@
 // Parent Component
 import AfterLoginPage from "@/components/AfterLogInPage";
+import Home from "@/components/Home";
 import Models from "@/components/Models";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -11,15 +12,7 @@ export default function Index() {
   const MainBody = () => {
     switch (SelectedFooterElement) {
       case 1:
-        return (
-          <Button
-            onClick={() => {
-              console.log(SelectedFooterElement);
-            }}
-          >
-            Click Me
-          </Button>
-        );
+        return <Home/>;
       case 2:
         return <Models />;
       case 3:

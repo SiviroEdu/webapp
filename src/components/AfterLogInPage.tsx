@@ -2,7 +2,14 @@
 import Header from './Header'; // Adjust the path to your Header component
 import Footer from './Footer'; // Adjust the path to your Footer component
 
-const AfterLoginPage = ({ children }:{ children: any}) => {
+const AfterLoginPage = (
+  { SelectedFooterElement,
+    SetSelectedFooterElement,
+    children }:
+  { children: any,
+    SelectedFooterElement: number,
+    SetSelectedFooterElement: React.Dispatch<React.SetStateAction<number>>
+  }) => {
   return (
     <div className="h-screen flex max-h-screen flex-col justify-between text-white">
       <div className="h-full flex flex-col justify-between items-center">
@@ -10,7 +17,7 @@ const AfterLoginPage = ({ children }:{ children: any}) => {
         <div className="grow flex justify-center items-center text-lg">
           {children}
         </div>
-        <Footer />
+        <Footer SelectedFooterElement={SelectedFooterElement} SetSelectedFooterElement={SetSelectedFooterElement}/>
       </div>
     </div>
   );

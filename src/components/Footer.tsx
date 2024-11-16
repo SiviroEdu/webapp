@@ -23,7 +23,7 @@ export default function Footer({
     };
   
     return (
-      <div className="flex flex-row items-center gap-4 px-8 p-4 rounded-full shadow-md">
+      <div className="flex flex-row items-center gap-4 px-8 p-4 rounded-full shadow-md align-middle">
         <div
           className={`p-2 shadow-inner rounded-l-2xl transition-transform duration-300 ${
             SelectedFooterElement === 1
