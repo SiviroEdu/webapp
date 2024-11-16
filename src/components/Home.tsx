@@ -8,9 +8,9 @@ export default function Home(){
         </h2>
         <br />
         <div className="flex align-middle w-[50%] mx-auto">
-          <h3 className="text-center text-black align-middle text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-            orem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit ametipsum dolor sit amet
-          </h3>
+          <h6 className="text-center text-black align-middle text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h6>
         </div>
         <br />
         <div className="flex align-middle w-[50%] mx-auto">
