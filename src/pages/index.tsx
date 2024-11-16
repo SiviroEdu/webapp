@@ -2,6 +2,7 @@
 import AfterLoginPage from "@/components/AfterLogInPage";
 import Home from "@/components/Home";
 import Models from "@/components/Models";
+import Login1 from "@/components/Login1";
 import Page400 from "@/components/page400";
 import Page401 from "@/components/page401";
 import Page402 from "@/components/page402";
@@ -21,7 +22,7 @@ export default function Index() {
       case 2:
         return <Models />;
       case 3:
-        return <Page402/>;
+        return <Login1/>;
       case 4:
         return <div>Workout Content</div>;
       default:
