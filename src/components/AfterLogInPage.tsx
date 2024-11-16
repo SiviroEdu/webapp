@@ -4,7 +4,7 @@ import Footer from './Footer'; // Adjust the path to your Footer component
 
 const AfterLoginPage = ({ children }:{ children: any}) => {
   return (
-    <div className="h-screen flex max-h-screen flex-col justify-between items-center text-white">
+    <div className="h-screen flex max-h-screen flex-col justify-between text-white">
       <div className="h-full flex flex-col justify-between items-center">
         <Header />
         <div className="grow flex justify-center items-center text-lg">

@@ -49,7 +49,8 @@ module.exports = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			oldprimary: 'hsl(var(--oldprimary))'
   		}
   	}
   },
