@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-const navigate = useNavigate();
 
 export function DeleteToken(): boolean{
     try {
@@ -7,7 +6,6 @@ export function DeleteToken(): boolean{
         return true;
     } catch(err){
         console.error("DeleteToken: ", err)
-        navigate('/login');
         return false;
     }
     
@@ -31,6 +29,19 @@ export function GetToken(): false | string{
         return token
     } catch(err){
         console.error("GetToken: ", err)
+        return false;
+    }
+}
+
+export function CheckToken(): boolean {
+    try {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            return false
+        }
+        return true
+    } catch(err){
+        console.error("CheckToken: ", err)
         return false;
     }
 }

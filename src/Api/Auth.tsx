@@ -12,23 +12,32 @@ export type deAuhtorized = {
 
 export async function Login(username: string, password: string): Promise<boolean> {
     try {
-        const response = await fetch(BACKEND_ENDPOINT + '/token', {
+        const body = new URLSearchParams({
+            username: username,
+            password: password,
+            scope: '',
+            client_id: '',
+            client_secret: ''
+        });
+
+        const response = await fetch(BACKEND_ENDPOINT + '/auth/token', {
             method: 'POST',
-            body: JSON.stringify({
-                username,
-                password
-            }),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: body.toString(),
         });
 
         if (!response.ok) {
             console.error(`HTTP error! Status: ${response.status}`)
-            return false
+            return false;
         }
 
         const token: responceToken = await response.json();
-        SetToken(token.access_token)
-        return true
+        SetToken(token.access_token);
+        return true;
     } catch (err) {
-        return false
+        console.error('Error during login:', err);
+        return false;
     }
 }

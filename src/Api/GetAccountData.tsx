@@ -16,7 +16,7 @@ export async function GetAccountData(): Promise<false | AccountData> {
         const token = GetToken();
         if (token === false) return false;
 
-        const response = await fetch(BACKEND_ENDPOINT + '/data', {
+        const response = await fetch(BACKEND_ENDPOINT + '/users/@me', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

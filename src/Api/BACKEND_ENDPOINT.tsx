@@ -1,2 +1,2 @@
-const BACKEND_ENDPOINT = "https://api.example.com"
+const BACKEND_ENDPOINT = "http://46.175.149.150:8002"
 export default BACKEND_ENDPOINT

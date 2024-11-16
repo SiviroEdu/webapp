@@ -1,12 +1,16 @@
+import { CacheUser } from '@/Api/Cache';
 import LightBulbSVG from '../svg/LightBulbSVG';
 import MoneySVG from '../svg/MoneySVG';
+import { AccountData } from '../Api/GetAccountData';
 
 export default function Header({
     SelectedFooterElement,
     SetSelectedFooterElement,
+    AccountData
   }: {
     SelectedFooterElement: number;
     SetSelectedFooterElement: React.Dispatch<React.SetStateAction<number>>;
+    AccountData: CacheUser | undefined
   }) {
 
     const HandleFooterSelect = (navNumber: number) => {
@@ -22,8 +26,8 @@ export default function Header({
                         ? " bg-input shadow-primary shadow-sm scale-110 "
                         : " hover:bg-input hover:shadow-primary shadow-sm hover:scale-110 "}`}
                         onClick={() => HandleFooterSelect(5)}>
-                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>Cool Name</p>
-                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>#16</p>
+                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>{AccountData?.name}</p>
+                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>{"#" + AccountData?.id}</p>
                     </div>
                     <div className='grow'/>
                    
@@ -31,11 +35,11 @@ export default function Header({
                 <div className="flex flex-col text-primary">
                     <div className='flex flex-row items-center justify-start gap-1'>
                         <MoneySVG classes='w-12 h-12 fill-primary' />
-                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>9300</p>
+                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>{AccountData?.money}</p>
                     </div>
                     <div className='flex flex-row items-center justify-start gap-1 mr-4'>
                         <LightBulbSVG classes='w-12 h-12 fill-primary' />
-                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>120</p>
+                        <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>{AccountData?.experience}</p>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,8 @@
 export type CacheUser = {
     money: number,
     experience: number,
-    Name: string
+    name: string,
+    id: number
 } 
 
 export function SetCacheUser(Data: CacheUser): boolean{
