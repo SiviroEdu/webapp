@@ -2,6 +2,11 @@
 import AfterLoginPage from "@/components/AfterLogInPage";
 import Home from "@/components/Home";
 import Models from "@/components/Models";
+import Page400 from "@/components/page400";
+import Page401 from "@/components/page401";
+import Page402 from "@/components/page402";
+import Page403 from "@/components/page403";
+import Page404 from "@/components/page404";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -16,7 +21,7 @@ export default function Index() {
       case 2:
         return <Models />;
       case 3:
-        return <div>Settings Content</div>;
+        return <Page402/>;
       case 4:
         return <div>Workout Content</div>;
       default:
