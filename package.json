@@ -23,6 +23,7 @@
     "embla-carousel-react": "^8.3.1",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.459.0",
+    "pg-to-ts": "^4.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-threejs": "^0.0.4",
