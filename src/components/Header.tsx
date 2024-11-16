@@ -19,8 +19,8 @@ export default function Header({
             <div className="flex flex-row gap-12 w-full">
                 <div className={`flex flex-row text-primary grow justify-center ml-4`}>
                     <div className={`flex flex-col p-2 shadow-inner rounded-3xl transition-transform duration-300 ${SelectedFooterElement === 5 
-                        ? " bg-input shadow-primary scale-110 "
-                        : " hover:bg-input hover:shadow-primary hover:scale-110 "}`}
+                        ? " bg-input shadow-primary shadow-sm scale-110 "
+                        : " hover:bg-input hover:shadow-primary shadow-sm hover:scale-110 "}`}
                         onClick={() => HandleFooterSelect(5)}>
                         <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>Cool Name</p>
                         <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>#16</p>

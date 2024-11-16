@@ -24,7 +24,7 @@ export default function Shop(){
 
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   <span className="text-4xl font-semibold">
-                    <Models/>
+                    <Models classes="!h-96 !w-96"/>
                   </span>
                 </CardContent>
 

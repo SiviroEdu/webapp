@@ -7,15 +7,15 @@ function Model() {
     return <primitive object={scene} />;
 }
 
-export default function Models() {
+export default function Models({classes}:{classes: string}) {
     return (
-        <Canvas className="!h-96 !w-96" camera={{ position: [0, 0, 14], fov: 10 }}>
+        <Canvas className={classes} camera={{ position: [0, 0, 14], fov: 10 }}>
             <ambientLight intensity={2} />
             <directionalLight position={[3, 3, 3]} />
             <pointLight position={[10, 10, 10]} />
             <Model />
             <OrbitControls 
-                enableZoom={true} 
+                enableZoom={false} 
                 minDistance={3} 
                 maxDistance={15} 
                 target={[0, 0, 0]} // Focus on the model
