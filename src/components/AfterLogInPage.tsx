@@ -1,11 +1,11 @@
 
 import Header from './Header'; // Adjust the path to your Header component
 import Footer from './Footer'; // Adjust the path to your Footer component
-import { useState } from 'react';
 
-const AfterLoginPage = ({ children }:{ children: any}) => {
 
-  const [SelectedFooterElement, SetSelectedFooterElement] = useState<Number>(1)
+const AfterLoginPage = (
+  { SelectedFooterElement, SetSelectedFooterElement, children }: 
+  { SelectedFooterElement: number, SetSelectedFooterElement: React.Dispatch<React.SetStateAction<number>>, children: any}) => {
 
   return (
     <div className="h-screen bg-background flex max-h-screen flex-col justify-between items-center text-white">
