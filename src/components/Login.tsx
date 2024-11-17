@@ -1,7 +1,7 @@
 import CappaSVG from '../svg/CappaSVG.tsx';
 import LogoSVG from '../svg/LogoSVG.tsx';
 import LoginComponent from './LoginComponent.tsx';
-
+import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 
 const Divider = () => (
   <div className="h-14 w-1 bg-primary rounded-full"></div>
@@ -9,6 +9,14 @@ const Divider = () => (
 
 
 const Login = () => {
+    const navigate = useNavigate();
+  
+    const handleTOS = () => {
+      // Perform logout operations, then navigate
+      navigate('/TOS');
+    };
+  
+
     return (
       <div className="h-screen flex max-h-screen flex-col justify-between text-white">
         <div className="h-full flex flex-col items-center justify-between">
@@ -27,7 +35,7 @@ const Login = () => {
             <footer className='w-[90%] mx-auto py-8'>
               <hr className="border-t-4 border-primary mx-auto w-1/1.5" />
               <div className='flex flex-row justify-evenly'>
-                <a href="" className='text-xl text-black'>Terms of use</a>
+                <a href="" className='text-xl text-black' onClick={handleTOS}>Terms of use</a>
                 <a href="" className='text-xl text-black'>Privacy policy</a>
                 <a href="" className='text-xl text-black'>Cookie policy</a>
               </div>

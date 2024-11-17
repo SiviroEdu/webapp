@@ -1,7 +1,7 @@
 
 
 import * as React from "react"
-
+import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
 import {
@@ -26,9 +26,6 @@ import { Login } from "@/Api/Auth"
 
 
 
-import { useNavigate } from 'react-router-dom';
-
-
 export default function LoginComponent(){
   
   const navigate = useNavigate();
@@ -49,8 +46,8 @@ export default function LoginComponent(){
       navigate('/');
   }
 
-
   return (
+    
     <Card className="w-[350px]">
       <CardContent>
         <form>
@@ -92,7 +89,7 @@ export default function LoginComponent(){
           <Button onClick={HandleSubmit} className="w-32 bg-primary m-2">Proceed</Button>
         </div>
         <p className="text-xs text-center">
-          By proceeding, you accept our <a href="" className="text-primary">Terms of use</a>, <a href="" className="text-primary">Privacy Policy</a> and <a href="" className="text-primary">Cookie policy</a>
+          By proceeding, you accept our <a href="/TOS" className="text-primary">Terms of use</a>, <a href="" className="text-primary">Privacy Policy</a> and <a href="" className="text-primary">Cookie policy</a>
         </p>
       </CardFooter>
     </Card>
