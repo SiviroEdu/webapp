@@ -1,4 +1,4 @@
-import {BACKEND_ENDPOINT2} from "./BACKEND_ENDPOINT";
+import {BACKEND_ENDPOINT3} from "./BACKEND_ENDPOINT";
 import { GetToken } from "./Token";
 
 export type answers = {
@@ -33,9 +33,9 @@ export default async function GetRandomExercise(course_id: number): Promise<fals
         if (token === false)
             return false
 
-        console.log('Making request to:', BACKEND_ENDPOINT2 + '/exercises/random?course_id=' + course_id);
+        console.log('Making request to:', BACKEND_ENDPOINT3 + '/exercises/random?course_id=' + course_id);
 
-        const response = await fetch(BACKEND_ENDPOINT2 + '/exercises/random?course_id=' + course_id, {
+        const response = await fetch(BACKEND_ENDPOINT3 + '/exercises/random?course_id=' + course_id, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -49,8 +49,9 @@ export default async function GetRandomExercise(course_id: number): Promise<fals
             console.error(`HTTP error! Status: ${response.status}, Response:`, await response.text());
             return false;
         }
-
-        const res: exercise = await response.json();
+       
+        const res: exercise = await response.json(); 
+        console.log(res)
         return res;
     } catch (err) {
         console.error('Error during getting a random question:', err);
