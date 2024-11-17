@@ -2,7 +2,6 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css'
 import Index from './pages/index.tsx';
-import Page404 from './components/page404.tsx';
 import Login from './components/Login.tsx';
 import MultiExercises from './components/MultiExercises.tsx';
 import SingleExercises from './components/SingleExercises.tsx';

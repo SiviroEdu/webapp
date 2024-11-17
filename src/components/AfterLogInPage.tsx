@@ -32,7 +32,9 @@ const AfterLoginPage = (
             money: data.coins,
             experience: data.bulbs,
             name: data.shkolo_username,
-            id: data.id
+            id: data.id,
+            level: data.id,
+            next_level_coins: data.next_level_coins
           };
           SetCacheUser(userCache);
           setAccData(userCache)

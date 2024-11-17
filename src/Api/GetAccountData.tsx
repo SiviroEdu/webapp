@@ -1,5 +1,5 @@
 import { deAuhtorized } from './Auth';
-import BACKEND_ENDPOINT from "./BACKEND_ENDPOINT";
+import {BACKEND_ENDPOINT1 } from "./BACKEND_ENDPOINT";
 import { DeleteToken, GetToken } from "./Token";
 
 export type AccountData = {
@@ -7,7 +7,9 @@ export type AccountData = {
     shkolo_username: string,
     pupil_id: number,
     coins: number,
-    bulbs: number
+    bulbs: number,
+    level: number,
+    next_level_coins: number
 }
 
 
@@ -16,7 +18,7 @@ export async function GetAccountData(): Promise<false | AccountData> {
         const token = GetToken();
         if (token === false) return false;
 
-        const response = await fetch(BACKEND_ENDPOINT + '/users/@me', {
+        const response = await fetch(BACKEND_ENDPOINT1 + '/users/@me', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,6 +32,7 @@ export async function GetAccountData(): Promise<false | AccountData> {
         }
 
         const result: AccountData | deAuhtorized = await response.json();
+        console.log(result)
 
         if (isAccountData(result)) {
             return result;
@@ -50,6 +53,8 @@ function isAccountData(data: any): data is AccountData {
         typeof data.shkolo_username === 'string' &&
         typeof data.pupil_id === 'number' &&
         typeof data.coins === 'number' &&
-        typeof data.bulbs === 'number'
+        typeof data.bulbs === 'number' &&
+        typeof data.level === "number" &&
+        typeof data.next_level_coins === "number"
     );
 }
