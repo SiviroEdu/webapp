@@ -7,7 +7,9 @@ export type AccountData = {
     shkolo_username: string,
     pupil_id: number,
     coins: number,
-    bulbs: number
+    bulbs: number,
+    level: number,
+    next_level_coins: number
 }
 
 
@@ -51,6 +53,8 @@ function isAccountData(data: any): data is AccountData {
         typeof data.shkolo_username === 'string' &&
         typeof data.pupil_id === 'number' &&
         typeof data.coins === 'number' &&
-        typeof data.bulbs === 'number'
+        typeof data.bulbs === 'number' &&
+        typeof data.level === "number" &&
+        typeof data.next_level_coins === "number"
     );
 }

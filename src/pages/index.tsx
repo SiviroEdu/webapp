@@ -19,7 +19,7 @@ export default function Index() {
       case 1:
         return <Home/>;
       case 2:
-        return <Shop></Shop>;
+        return <Shop/>;
       case 3:
         return <Exersices/>;
       case 4:
