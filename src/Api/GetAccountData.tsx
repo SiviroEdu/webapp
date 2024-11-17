@@ -1,5 +1,5 @@
 import { deAuhtorized } from './Auth';
-import BACKEND_ENDPOINT from "./BACKEND_ENDPOINT";
+import {BACKEND_ENDPOINT1 } from "./BACKEND_ENDPOINT";
 import { DeleteToken, GetToken } from "./Token";
 
 export type AccountData = {
@@ -16,7 +16,7 @@ export async function GetAccountData(): Promise<false | AccountData> {
         const token = GetToken();
         if (token === false) return false;
 
-        const response = await fetch(BACKEND_ENDPOINT + '/users/@me', {
+        const response = await fetch(BACKEND_ENDPOINT1 + '/users/@me', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,6 +30,7 @@ export async function GetAccountData(): Promise<false | AccountData> {
         }
 
         const result: AccountData | deAuhtorized = await response.json();
+        console.log(result)
 
         if (isAccountData(result)) {
             return result;
