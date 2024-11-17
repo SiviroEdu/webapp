@@ -1,6 +1,6 @@
 // Parent Component
 import AfterLoginPage from "@/components/AfterLogInPage";
-import Exersices from "@/components/Exersices";
+import Exersices from "@/components/MultiExercises";
 import Home from "@/components/Home";
 import ParticleEffects from "@/components/ParticleEffects"
 import Shop from "@/components/Shop";
