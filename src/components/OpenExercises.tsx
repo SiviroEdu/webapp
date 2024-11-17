@@ -38,6 +38,9 @@ export default function ClosedExersices(){
             <Button variant="outline" className="sm:text-lg md:text-xl lg:text-2xl xl:text-3xl py-6 px-4 border border-primary text-primary align-middle text-center items-center justify-center text-black">
                 d. Aspernatur voluptas unde ut neque soluta!
             </Button>
+            <div className="mx-auto">
+          <Button className="w-32 bg-primary m-2">Proceed</Button>
+        </div>
         </div>
     )
 }
